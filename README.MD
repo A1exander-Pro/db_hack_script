@@ -21,9 +21,9 @@
 а __lesson__ урок, к которому надо добавить похвалу. Пример функции: ```create_commendation("Фролов Иван", "История")```. Важно писать имя, фамилию и названия уровка без ошибок, проверьте написание перед запуском скрипта!
 
 ## Возможные ошибки
-- Сообщение об ошибке, при которой вы ввели неправильное имя: ```datacenter.models.Schoolkid.DoesNotExist: Schoolkid matching query does not exist.```
-- Сообщение об ошибке, если вы не указали фамилию ```datacenter.models.Schoolkid.MultipleObjectsReturned: get() returned more than one Schoolkid -- it returned 22!```
-- Сообщение об ошибке, если вы неправильно указали урок ```AttributeError: 'NoneType' object has no attribute 'date'```
+- Сообщение об ошибке, при которой вы ввели неправильное имя:<br> ```datacenter.models.Schoolkid.DoesNotExist: Schoolkid matching query does not exist.```
+- Сообщение об ошибке, если вы не указали фамилию <br>```datacenter.models.Schoolkid.MultipleObjectsReturned: get() returned more than one Schoolkid -- it returned 22!```
+- Сообщение об ошибке, если вы неправильно указали урок <br>```AttributeError: 'NoneType' object has no attribute 'date'```
 
 ## Project Goals
 Код написан в образовательных целях на онлайн курсе для веб разработчиков [dvmn.org](https://dvmn.org/).
