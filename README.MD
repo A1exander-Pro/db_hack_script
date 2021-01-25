@@ -2,7 +2,7 @@
 
 ## Установка:
 - У вас имеется доступ к базе данных электронного дневника.
-- Скопируйте код из __scripts.py__ в файл __models.py__
+- Скопируйте код из __scripts.py__ в файл __models.py__ ниже основного кода.
 - Далее необходимо в терминале/консоле запустить [Django shell](https://tutorial.djangogirls.org/ru/django_orm/) <br>
 ```your_directory your_username$ python manage.py shell``` <br>
 - Пропишите в ```shell``` импорт моделей и функций из __models.py__:<br>
@@ -17,9 +17,9 @@
 - Для добавления похвалы к последнему выбранному уроку используйте функцию <br> ```create_commendation(schoolkid, lesson)``` <br>, где __schoolkid__ фамилия и имя ученика, а __lesson__ урок, к которому надо добавить похвалу. Пример функции: <br>```create_commendation("Фролов Иван", "История")``` Важно писать имя, фамилию и названия уровка без ошибок, проверьте написание перед запуском скрипта!
 
 ## Возможные ошибки
-- Сообщение об ошибке, при которой вы ввели неправильное имя:<br> ```datacenter.models.Schoolkid.DoesNotExist: Schoolkid matching query does not exist.```
+- Сообщение об ошибке, при которой вы ввели неправильное имя:<br> ```django.http.response.Http404: Schoolkid does not exist```
 - Сообщение об ошибке, если вы не указали фамилию <br>```datacenter.models.Schoolkid.MultipleObjectsReturned: get() returned more than one Schoolkid -- it returned 22!```
-- Сообщение об ошибке, если вы неправильно указали урок <br>```AttributeError: 'NoneType' object has no attribute 'date'```
+- Сообщение об ошибке, если вы неправильно указали урок <br>```'Такого урока не существует'```
 
 ## Project Goals
 Код написан в образовательных целях на онлайн курсе для веб разработчиков [dvmn.org](https://dvmn.org/).
