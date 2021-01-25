@@ -2,13 +2,11 @@
 
 ## Установка:
 - У вас имеется доступ к базе данных электронного дневника.
-- Поместите файл __scripts.py__ в корневую папку проекта или скопируйте код в __models.py__
+- Скопируйте код из __scripts.py__ в файл __models.py__
 - Далее необходимо в терминале/консоле запустить [Django shell](https://tutorial.djangogirls.org/ru/django_orm/) <br>
 ```your_directory your_username$ python manage.py shell``` <br>
 - Пропишите в ```shell``` импорт моделей и функций, если функции вы скопировали в __models.py__:<br>
 ```from datacenter.models import *```
-- Импотрируйте функции скрипта, если вы положили их отдельным файлом __scripts.py__ в корневую папку, прописав в ```shell```:<br>
-```from scripts import *```
 - Импортуйте через ```shell```  модуль random:<br>
 ```import random```
 
