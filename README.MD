@@ -5,7 +5,7 @@
 - Скопируйте код из __scripts.py__ в файл __models.py__
 - Далее необходимо в терминале/консоле запустить [Django shell](https://tutorial.djangogirls.org/ru/django_orm/) <br>
 ```your_directory your_username$ python manage.py shell``` <br>
-- Пропишите в ```shell``` импорт моделей и функций, если функции вы скопировали в __models.py__:<br>
+- Пропишите в ```shell``` импорт моделей и функций из __models.py__:<br>
 ```from datacenter.models import *```
 - Импортуйте через ```shell```  модуль random:<br>
 ```import random```
