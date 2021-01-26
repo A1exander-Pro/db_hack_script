@@ -5,7 +5,7 @@ def fix_marks(schoolkid):
                                         points__lte=3).update(points=5)
         return new_marks
     except Schoolkid.DoesNotExist:
-        raise Http404("Schoolkid does not exist")
+        raise Exception("Schoolkid does not exist")
 
 
 def remove_chastisements(schoolkid):
@@ -14,7 +14,7 @@ def remove_chastisements(schoolkid):
         deleted_chastisement = Chastisement.objects.filter(schoolkid=child).delete()
         return deleted_chastisement
     except Schoolkid.DoesNotExist:
-        raise Http404("Schoolkid does not exist")
+        raise Exception("Schoolkid does not exist")
 
 
 def create_commendation(schoolkid, lesson):
@@ -48,7 +48,7 @@ def create_commendation(schoolkid, lesson):
         else:
             return "В этом уроке уже есть похвала, попробуй другой"
     except Schoolkid.DoesNotExist:
-        raise Http404("Schoolkid does not exist")
+        raise Exception("Schoolkid does not exist")
 
 
 
