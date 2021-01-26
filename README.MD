@@ -2,11 +2,11 @@
 
 ## Установка:
 - У вас имеется доступ к базе данных электронного дневника.
-- Скопируйте код из __scripts.py__ в файл __models.py__ ниже основного кода.
+- Поместите файл __scripts.py__ в корневую папку проекта.
 - Далее необходимо в терминале/консоле запустить [Django shell](https://tutorial.djangogirls.org/ru/django_orm/).  
-```your_directory your_username$ python manage.py shell```.  
-- Пропишите в shell импорт моделей и функций из __models.py__:  
-```from datacenter.models import *```
+```your_directory your_username$ python manage.py shell```  
+- Пропишите в shell импорт скриптов из __scripts.py__:  
+```from scripts import *```
 
 ## Как использовать 
 - Для исправления оценок, которые меньше 4х баллов используйте функцию, где __schoolkid__ фамилия и имя ученика.  
