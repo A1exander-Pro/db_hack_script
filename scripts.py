@@ -1,8 +1,11 @@
+from datacenter.models import *
+
+
 def fix_marks(schoolkid):
     try:
         child = Schoolkid.objects.filter(full_name__contains=schoolkid).get()
     except Schoolkid.DoesNotExist:
-        raise Exception("Schoolkid does not exist")
+        raise ValueError("Такого ученика не существует")
     new_marks = Mark.objects.filter(schoolkid=child,
                                     points__lte=3).update(points=5)
     return new_marks
@@ -12,7 +15,7 @@ def remove_chastisements(schoolkid):
     try:
         child = Schoolkid.objects.filter(full_name__contains=schoolkid).get()
     except Schoolkid.DoesNotExist:
-        raise Exception("Schoolkid does not exist")
+        raise ValueError("Такого ученика не существует")
     deleted_chastisement = Chastisement.objects.filter(schoolkid=child).delete()
     return deleted_chastisement
 
@@ -27,7 +30,7 @@ def create_commendation(schoolkid, lesson):
     try:
         child = Schoolkid.objects.filter(full_name__contains=schoolkid).get()
     except Schoolkid.DoesNotExist:
-        raise Exception("Schoolkid does not exist")
+        raise ValueError("Такого ученика не существует")
     child_lessons = Lesson.objects.filter(year_of_study=child.year_of_study,
                                           group_letter=child.group_letter,
                                           subject__title=lesson)
